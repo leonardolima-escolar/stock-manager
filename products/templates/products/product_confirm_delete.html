@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<p>Deseja realmente apagar o {{ object.name }}?</p>
+
+<form action="" method="POST" class="form">
+  {% csrf_token %}
+  <button type="submit" class="button yes-button">Sim</button>
+</form>
+
+<a href="{% url 'products' %}" class="button back-button">Voltar</a>
+
+{% endblock content %}

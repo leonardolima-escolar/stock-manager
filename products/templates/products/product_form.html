@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form action="" method="POST" class="form">
+  {% csrf_token %}
+  {{ form }}
+  <button type="submit" class="button save-button">Salvar</button>
+</form>
+
+<a href="{% url 'products' %}" class="button back-button">Voltar</a>
+
+{% endblock content %}

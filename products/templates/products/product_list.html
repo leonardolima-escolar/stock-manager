@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<table class="table">
+  <tr class="table-header">
+    <th>Nome</th>
+    <th>Preço</th>
+    <th>Quantidade</th>
+    <th>Editar</th>
+    <th>Apagar</th>
+  </tr>
+
+  {% for product in object_list %}
+  <tr class="table-row">
+    <td><a href="{% url 'detail_product' product.id %}">{{ product.name }}</a></td>
+    <td>R${{ product.price|floatformat:2 }}</td>
+    <td>{{ product.quantity }}</td>
+    <td><a href="{% url 'edit_product' product.id %}">editar</a></td>
+    <td><a href="{% url 'delete_product' product.id %}">apagar</a></td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock content %}

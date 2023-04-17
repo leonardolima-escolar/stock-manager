@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciamento de Estoque</title>
+</head>
+
+<body>
+  <div class="app">
+    <header class="header">
+      Gerenciamento de Estoque
+      <nav class="nav">
+        <ul>
+          <li class="nav-item"><a href="{% url 'add_product' %}">Cadastrar produto</a></li>
+          <li class="nav-item"><a href="{% url 'report' %}">Gerar relatório</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      <h1>Produtos</h1>
+      {% block content %}
+      {% endblock content %}
+    </main>
+
+    <footer class="footer">Copyright © 2022 - 2023 | Leonardo</footer>
+  </div>
+</body>
+
+</html>
