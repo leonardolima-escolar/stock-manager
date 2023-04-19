@@ -1,4 +1,10 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'products/css/style.css' %}">
+{% endblock style %}
+
 {% block content %}
 
 <table class="table">

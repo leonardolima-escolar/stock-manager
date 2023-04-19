@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,13 +7,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gerenciamento de Estoque</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  {% block style %}
+  {% endblock style %}
 </head>
 
 <body>
   <div class="app">
     <header class="header">
-      Gerenciamento de Estoque
-      <nav class="nav">
+      <div class="logo">
+        <a href="{% url 'products' %}">Gerenciamento de Estoque</a>
+      </div>
+      <nav class="navbar">
         <ul>
           <li class="nav-item"><a href="{% url 'add_product' %}">Cadastrar produto</a></li>
           <li class="nav-item"><a href="{% url 'report' %}">Gerar relatório</a></li>
@@ -20,12 +27,12 @@
     </header>
 
     <main class="main">
-      <h1>Produtos</h1>
+      <h1 class="title">Produtos</h1>
       {% block content %}
       {% endblock content %}
     </main>
 
-    <footer class="footer">Copyright © 2022 - 2023 | Leonardo</footer>
+    <footer class="footer">Copyright © 2023 | Leonardo</footer>
   </div>
 </body>
 

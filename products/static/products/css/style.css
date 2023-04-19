@@ -1,0 +1,57 @@
+table {
+  border-spacing: 0;
+  width: 500px;
+}
+
+.table {
+  margin: 0 auto;
+  border: 4px solid black;
+}
+
+.table-header {
+  text-align: left;
+  background-color: rgb(1, 1, 59);
+  color: white;
+}
+
+.table-header th,
+td {
+  padding: 5px 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.form input {
+  padding: 4px 8px;
+  font-size: 16px;
+}
+
+.button {
+  padding: 12px 24px;
+  color: white;
+  border-radius: 4px;
+}
+
+.back-button {
+  display: inline-block;
+  background-color: #1F2937;
+}
+
+.back-button:hover,
+.save-button:hover,
+.yes-button:hover {
+  background-color: #496183;
+}
+
+.save-button,
+.yes-button {
+  background-color: #1F2937;
+  border: none;
+  font-size: 16px;
+}
